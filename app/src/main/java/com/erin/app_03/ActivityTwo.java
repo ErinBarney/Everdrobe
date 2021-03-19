@@ -1,6 +1,7 @@
 package com.erin.app_03;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,7 +17,8 @@ public class ActivityTwo extends AppCompatActivity {
         TextView title = (TextView) findViewById(R.id.activityTitle2);
         title.setText("Account");
 
-        TextView textView = (TextView) findViewById(R.id.text_username);
-        textView.setText("Username");
+        ImageView accountImage = (ImageView) findViewById(R.id.imageView);
+
+
     }
 }
