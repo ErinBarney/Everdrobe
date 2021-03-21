@@ -12,7 +12,7 @@ public class ActivityAccount extends AppCompatActivity {
     @Override
     protected void onCreate(@NonNull Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        setContentView(R.layout.fragment_account);
 
         TextView title = (TextView) findViewById(R.id.activityTitle2);
         title.setText("Account");

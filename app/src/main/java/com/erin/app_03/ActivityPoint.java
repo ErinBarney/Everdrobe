@@ -10,7 +10,7 @@ public class ActivityPoint extends AppCompatActivity {
     @Override
     protected void onCreate(@NonNull Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_point);
+        setContentView(R.layout.fragment_point);
 
         TextView title = (TextView) findViewById(R.id.activityTitle3);
         title.setText("Point");

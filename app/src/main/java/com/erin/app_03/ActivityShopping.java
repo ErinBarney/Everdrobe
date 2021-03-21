@@ -10,7 +10,7 @@ public class ActivityShopping extends AppCompatActivity {
     @Override
     protected void onCreate(@NonNull Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping);
+        setContentView(R.layout.fragment_shopping);
 
         TextView title = (TextView) findViewById(R.id.activityTitle1);
         title.setText("Shopping");
