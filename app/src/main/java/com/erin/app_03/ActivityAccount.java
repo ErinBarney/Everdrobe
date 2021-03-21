@@ -14,7 +14,7 @@ public class ActivityAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_account);
 
-        TextView title = (TextView) findViewById(R.id.activityTitle2);
+        TextView title = (TextView) findViewById(R.id.activityTitleAccount);
         title.setText("Account");
 
         ImageView accountImage = (ImageView) findViewById(R.id.imageView);

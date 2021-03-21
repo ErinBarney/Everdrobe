@@ -12,7 +12,7 @@ public class ActivityPoint extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_point);
 
-        TextView title = (TextView) findViewById(R.id.activityTitle3);
+        TextView title = (TextView) findViewById(R.id.activityTitlePoint);
         title.setText("Point");
     }
 }

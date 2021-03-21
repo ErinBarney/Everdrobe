@@ -12,7 +12,7 @@ public class ActivityShopping extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_shopping);
 
-        TextView title = (TextView) findViewById(R.id.activityTitle1);
+        TextView title = (TextView) findViewById(R.id.activityTitleShopping);
         title.setText("Shopping");
 
     }
