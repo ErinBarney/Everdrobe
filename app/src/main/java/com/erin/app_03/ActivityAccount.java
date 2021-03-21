@@ -8,11 +8,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class ActivityTwo extends AppCompatActivity {
+public class ActivityAccount extends AppCompatActivity {
     @Override
     protected void onCreate(@NonNull Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two);
+        setContentView(R.layout.activity_account);
 
         TextView title = (TextView) findViewById(R.id.activityTitle2);
         title.setText("Account");

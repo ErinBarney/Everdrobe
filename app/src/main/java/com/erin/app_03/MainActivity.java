@@ -3,10 +3,8 @@ package com.erin.app_03;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,15 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.navigation_shopping:
-                        Intent intent1 = new Intent(MainActivity.this, ActivityOne.class);
+                        Intent intent1 = new Intent(MainActivity.this, ActivityShopping.class);
                         startActivity(intent1);
                         break;
                     case R.id.navigation_account:
-                        Intent intent2 = new Intent(MainActivity.this, ActivityTwo.class);
+                        Intent intent2 = new Intent(MainActivity.this, ActivityAccount.class);
                         startActivity(intent2);
                         break;
                     case R.id.navigation_point:
-                        Intent intent3 = new Intent(MainActivity.this, ActivityThree.class);
+                        Intent intent3 = new Intent(MainActivity.this, ActivityPoint.class);
                         startActivity(intent3);
                         break;
                 }

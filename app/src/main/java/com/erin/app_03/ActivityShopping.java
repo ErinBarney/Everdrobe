@@ -6,13 +6,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ActivityThree extends AppCompatActivity {
+public class ActivityShopping extends AppCompatActivity {
     @Override
     protected void onCreate(@NonNull Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_three);
+        setContentView(R.layout.activity_shopping);
 
-        TextView title = (TextView) findViewById(R.id.activityTitle3);
-        title.setText("Point");
+        TextView title = (TextView) findViewById(R.id.activityTitle1);
+        title.setText("Shopping");
+
     }
 }
