@@ -1,4 +1,4 @@
-package com.erin.app_03.ui.shopping;
+package com.erin.Everdrobe.ui.point;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,19 +12,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.erin.app_03.R;
+import com.erin.Everdrobe.R;
 
-public class ShoppingFragment extends Fragment {
+public class PointFragment extends Fragment {
 
-    private ShoppingViewModel shoppingViewModel;
+    private PointViewModel pointViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shoppingViewModel =
-                new ViewModelProvider(this).get(ShoppingViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_shopping, container, false);
-        final TextView textView = root.findViewById(R.id.text_shopping);
-        shoppingViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        pointViewModel =
+                new ViewModelProvider(this).get(PointViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_point, container, false);
+        final TextView textView = root.findViewById(R.id.text_point);
+        pointViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

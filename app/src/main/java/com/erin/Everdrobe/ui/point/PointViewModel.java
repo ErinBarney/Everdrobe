@@ -1,16 +1,16 @@
-package com.erin.app_03.ui.account;
+package com.erin.Everdrobe.ui.point;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class AccountViewModel extends ViewModel {
+public class PointViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public AccountViewModel() {
+    public PointViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is account fragment");
+        mText.setValue("This is point fragment");
     }
 
     public LiveData<String> getText() {

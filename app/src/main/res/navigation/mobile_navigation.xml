@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_shopping"
-        android:name="com.erin.app_03.ui.shopping.ShoppingFragment"
+        android:name="com.erin.Everdrobe.ui.shopping.ShoppingFragment"
         android:label="@string/title_shopping"
         tools:layout="@layout/fragment_shopping" />
 
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.erin.app_03.ui.account.AccountFragment"
+        android:name="com.erin.Everdrobe.ui.account.AccountFragment"
         android:label="@string/title_account"
         tools:layout="@layout/fragment_account" />
 
     <fragment
         android:id="@+id/navigation_point"
-        android:name="com.erin.app_03.ui.point.PointFragment"
+        android:name="com.erin.Everdrobe.ui.point.PointFragment"
         android:label="@string/title_point"
         tools:layout="@layout/fragment_point" />
 </navigation>

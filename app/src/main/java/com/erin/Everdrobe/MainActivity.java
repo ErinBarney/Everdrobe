@@ -1,9 +1,10 @@
-package com.erin.app_03;
+package com.erin.Everdrobe;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.erin.Everdrobe.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -20,27 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()) {
-                    case R.id.navigation_shopping:
-                        Intent intent1 = new Intent(MainActivity.this, ActivityShopping.class);
-                        startActivity(intent1);
-                        break;
-                    case R.id.navigation_account:
-                        Intent intent2 = new Intent(MainActivity.this, ActivityAccount.class);
-                        startActivity(intent2);
-                        break;
-                    case R.id.navigation_point:
-                        Intent intent3 = new Intent(MainActivity.this, ActivityPoint.class);
-                        startActivity(intent3);
-                        break;
-                }
-                return false;
-            }
-        });
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(

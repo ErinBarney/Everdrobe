@@ -1,16 +1,16 @@
-package com.erin.app_03.ui.shopping;
+package com.erin.Everdrobe.ui.account;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ShoppingViewModel extends ViewModel {
+public class AccountViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ShoppingViewModel() {
+    public AccountViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is shopping fragment");
+        mText.setValue("This is account fragment");
     }
 
     public LiveData<String> getText() {

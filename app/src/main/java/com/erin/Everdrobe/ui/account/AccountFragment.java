@@ -1,19 +1,15 @@
-package com.erin.app_03.ui.account;
+package com.erin.Everdrobe.ui.account;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.erin.app_03.R;
+import com.erin.Everdrobe.R;
 
 public class AccountFragment extends Fragment {
 

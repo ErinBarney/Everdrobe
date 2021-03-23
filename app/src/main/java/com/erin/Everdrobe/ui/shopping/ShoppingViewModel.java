@@ -1,16 +1,16 @@
-package com.erin.app_03.ui.point;
+package com.erin.Everdrobe.ui.shopping;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PointViewModel extends ViewModel {
+public class ShoppingViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public PointViewModel() {
+    public ShoppingViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is point fragment");
+        mText.setValue("This is shopping fragment");
     }
 
     public LiveData<String> getText() {
