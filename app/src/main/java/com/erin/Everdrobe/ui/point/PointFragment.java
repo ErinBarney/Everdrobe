@@ -21,24 +21,16 @@ import com.erin.Everdrobe.ui.shopping.ShoppingFragment;
 
 public class PointFragment extends Fragment {
 
-    private PointViewModel pointViewModel;
-
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
 
 
-        pointViewModel =
-                new ViewModelProvider(this).get(PointViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_point, container, false);
         final TextView textView = root.findViewById(R.id.text_point);
-        pointViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         Button btnFragment = (Button)root.findViewById(R.id.button_purchasesustainable);
         btnFragment.setOnClickListener(new View.OnClickListener() {
             @Override
