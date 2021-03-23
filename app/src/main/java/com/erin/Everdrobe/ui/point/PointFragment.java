@@ -36,8 +36,9 @@ public class PointFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fr = getChildFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_point, new SustainableClothesFragment());
+                fr.replace(R.id.nav_host_fragment_container, new SustainableClothesFragment());
                 fr.commit();
+
             }
         });
 

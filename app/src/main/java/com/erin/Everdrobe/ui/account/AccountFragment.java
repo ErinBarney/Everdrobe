@@ -13,11 +13,10 @@ import com.erin.Everdrobe.R;
 
 public class AccountFragment extends Fragment {
 
-    private AccountViewModel accountViewModel;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        accountViewModel =
-                new ViewModelProvider(this).get(AccountViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_account, container, false);
 
         return root;

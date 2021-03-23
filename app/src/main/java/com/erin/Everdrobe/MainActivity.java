@@ -5,10 +5,16 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.erin.Everdrobe.R;
+import com.erin.Everdrobe.ui.point.HowToFragment;
+import com.erin.Everdrobe.ui.point.PointFragment;
+import com.erin.Everdrobe.ui.point.SustainableClothesFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -22,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
@@ -31,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+        FragmentTransaction fragmentTransaction =getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.commit();
+
+
     }
 
+
 }
+
+
