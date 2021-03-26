@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.erin.Everdrobe.ui.point.PointFragment">
 
+
+
+
     <TextView
         android:id="@+id/activityTitlePoint"
         android:layout_width="0dp"
@@ -42,6 +45,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
         android:text="Get Points"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,6 +57,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="100dp"
         android:text="Use Points"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_getpoints" />
 
@@ -64,6 +69,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="100dp"
         android:text="Remaining Clothes"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_usepoints" />
 
@@ -75,6 +81,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="200dp"
         android:text="Your point"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_usepoints" />
 
@@ -86,6 +93,7 @@
         android:layout_marginLeft="80dp"
         android:layout_marginTop="33dp"
         android:text="How To"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,6 +116,7 @@
         android:layout_marginLeft="108dp"
         android:layout_marginTop="292dp"
         android:text="3"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -119,6 +128,7 @@
         android:layout_marginLeft="108dp"
         android:layout_marginTop="400dp"
         android:text="5 pt"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

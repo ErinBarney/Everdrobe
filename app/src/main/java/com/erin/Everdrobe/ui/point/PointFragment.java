@@ -1,5 +1,6 @@
 package com.erin.Everdrobe.ui.point;
 
+import android.graphics.Point;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,8 @@ import com.erin.Everdrobe.ui.shopping.ShoppingFragment;
 public class PointFragment extends Fragment {
 
 
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -35,8 +38,9 @@ public class PointFragment extends Fragment {
         btnFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fr = getChildFragmentManager().beginTransaction();
-                fr.replace(R.id.nav_host_fragment_container, new SustainableClothesFragment());
+
+                FragmentTransaction fr = getFragmentManager().beginTransaction();
+
                 fr.commit();
 
             }

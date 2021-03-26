@@ -1,18 +1,23 @@
 package com.erin.Everdrobe;
 
+import android.accounts.Account;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.erin.Everdrobe.R;
+import com.erin.Everdrobe.ui.account.AccountFragment;
 import com.erin.Everdrobe.ui.point.HowToFragment;
 import com.erin.Everdrobe.ui.point.PointFragment;
 import com.erin.Everdrobe.ui.point.SustainableClothesFragment;
+import com.erin.Everdrobe.ui.shopping.ShoppingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
@@ -20,28 +25,58 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+
 public class MainActivity extends AppCompatActivity {
+
+    Fragment currentFragment = null;
+    FragmentTransaction ft;
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            switch (item.getItemId()) {
+                case R.id.navigation_shopping:
+                    currentFragment = new ShoppingFragment();
+                    ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.FrameLayout_activity, currentFragment);
+                    ft.commit();
+                    return true;
+                case R.id.navigation_account:
+                    currentFragment = new AccountFragment();
+                    ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.FrameLayout_activity, currentFragment);
+                    ft.commit();
+                    return true;
+                case R.id.navigation_point:
+                    currentFragment = new PointFragment();
+                    ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.FrameLayout_activity, currentFragment);
+                    ft.commit();
+                    return true;
+            }
+
+            return false;
+        }
+
+
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+        ft = getSupportFragmentManager().beginTransaction();
+        currentFragment = new ShoppingFragment();
+        ft.replace(R.id.FrameLayout_activity, currentFragment);
+        ft.commit();
 
-
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_shopping, R.id.navigation_account, R.id.navigation_point)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
-
-        FragmentTransaction fragmentTransaction =getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.commit();
-
-
+        BottomNavigationView navigation = (BottomNavigationView)
+                findViewById(R.id.mobile_navigation); navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
 
