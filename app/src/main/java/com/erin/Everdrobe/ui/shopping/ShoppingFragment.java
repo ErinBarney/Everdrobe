@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -13,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.erin.Everdrobe.R;
+import com.erin.Everdrobe.ui.Item;
+import com.erin.Everdrobe.ui.ItemListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,22 +34,37 @@ public class ShoppingFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
 // ListViewに表示するデータ
-        final ArrayList<String> items = new ArrayList<>();
-        items.add("Item1");
-        items.add("Item2");
-        items.add("Item3");
-        items.add("Item4");
-        items.add("Item5");
-        items.add("Item6");
+
+
+
 
 
 
 // ListViewをセット
-        final ArrayAdapter adapter = new ArrayAdapter(this.getContext(), R.layout.support_simple_spinner_dropdown_item, items);
+
         ListView listView = (ListView) view.findViewById(R.id.list_view);
-        listView.setAdapter(adapter);
+
+        //表示するデータ
+        Item Item1 = new Item("Earring", "Unused.", "drawable://" + R.drawable.item1);
+        Item Item2 = new Item("Jean Jacket", "Almost new!!", "drawable://" + R.drawable.item2);
+        Item Item3 = new Item("Pants", "It's a little old, but it looks like secondhand clothes and is very cute.", "drawable://" + R.drawable.item3);
+        Item Item4 = new Item("Top&Bottom set", "The thread is fraying a little bit, but no worries about wearing.", "drawable://" + R.drawable.item4);
+        Item Item5 = new Item("Skirt", "Unused.", "drawable://" + R.drawable.item5);
+        Item Item6 = new Item("Dress", "Nearly Unused.", "drawable://" + R.drawable.item6);
+
+        ArrayList<Item> itemList = new ArrayList<>();
+        itemList.add(Item1);
+        itemList.add(Item2);
+        itemList.add(Item3);
+        itemList.add(Item4);
+        itemList.add(Item5);
+        itemList.add(Item6);
+
+     ItemListAdapter adapter = new ItemListAdapter(this.getContext(), R.layout.list_item_layout, itemList);
+     listView.setAdapter(adapter);
+
         // セルを選択されたら詳細画面フラグメント呼び出す
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // 詳細画面へ値を渡す
@@ -62,7 +80,7 @@ public class ShoppingFragment extends Fragment {
                 fr.commit();
 
             }
-        });
+        });*/
     }
 }
 
