@@ -33,12 +33,6 @@ public class ShoppingFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-// ListViewに表示するデータ
-
-
-
-
-
 
 // ListViewをセット
 
@@ -64,7 +58,7 @@ public class ShoppingFragment extends Fragment {
      listView.setAdapter(adapter);
 
         // セルを選択されたら詳細画面フラグメント呼び出す
-       /* listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // 詳細画面へ値を渡す
@@ -80,78 +74,10 @@ public class ShoppingFragment extends Fragment {
                 fr.commit();
 
             }
-        });*/
+        });
     }
 }
 
 
 
 
-    /*private static final String[] scenes = {
-            "Item1",
-            "Item2",
-            "Item3",
-            "Item4",
-            "Item5",
-            "Item6"
-    };
-
-    // ちょっと冗長的ですが分かり易くするために
-    private static final int[] photos = {
-            R.drawable.item1,
-            R.drawable.item2,
-            R.drawable.item3,
-            R.drawable.item4,
-            R.drawable.item5,
-            R.drawable.item6
-    };
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // ListViewのインスタンスを生成
-        ListView listView = findViewById(R.id.list_view);
-
-        // BaseAdapter を継承したadapterのインスタンスを生成
-        // レイアウトファイル list.xml を activity_main.xml に
-        // inflate するためにadapterに引数として渡す
-        BaseAdapter adapter = new ListViewAdapter(this.getContext(),
-                R.layout.custom_cell, scenes, photos);
-
-        // ListViewにadapterをセット
-        listView.setAdapter(adapter);
-
-    }
-
-
-}*/
-
-
-
-
-
-
-/*
-
-    static List<String> items = new ArrayList<String>();
-    static ArrayAdapter<String> adapter;
-
-    ListView listView1;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        listView1 = (ListView)findViewById(R.id.list_view);
-
-        items.add("Item 1");
-        items.add("Item 2");
-        items.add("Item 3");
-
-        adapter =
-                new ArrayAdapter<String>(this, R.layout.layout_item1, R.id.row_textview1, items);
-
-        listView1.setAdapter(adapter);
-    }
-
-*/
