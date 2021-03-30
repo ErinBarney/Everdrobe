@@ -53,6 +53,18 @@ public class ShoppingFragment extends Fragment {
         itemList.add(Item4);
         itemList.add(Item5);
         itemList.add(Item6);
+        itemList.add(Item1);
+        itemList.add(Item2);
+        itemList.add(Item3);
+        itemList.add(Item4);
+        itemList.add(Item5);
+        itemList.add(Item6);
+        itemList.add(Item1);
+        itemList.add(Item2);
+        itemList.add(Item3);
+        itemList.add(Item4);
+        itemList.add(Item5);
+        itemList.add(Item6);
 
      ItemListAdapter adapter = new ItemListAdapter(this.getContext(), R.layout.list_item_layout, itemList);
      listView.setAdapter(adapter);
