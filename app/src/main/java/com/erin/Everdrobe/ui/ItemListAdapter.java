@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -124,17 +125,9 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
 
 
 
-     /*   LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView = inflator.inflate(mResource, parent, false);
-        TextView tvName = (TextView) convertView.findViewById(R.id.text_name);
-        TextView tvCondition = (TextView) convertView.findViewById(R.id.text_condition);
-        tvName.setText(name);
-        tvCondition.setText(condition);
-
-        return convertView;
-
-
-    }*/
 
 
 }
+
+
+

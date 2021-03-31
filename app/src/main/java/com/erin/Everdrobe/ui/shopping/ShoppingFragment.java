@@ -1,5 +1,6 @@
 package com.erin.Everdrobe.ui.shopping;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,9 +8,11 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -31,6 +34,7 @@ public class ShoppingFragment extends Fragment {
     }
 
 
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
@@ -38,7 +42,7 @@ public class ShoppingFragment extends Fragment {
 
         ListView listView = (ListView) view.findViewById(R.id.list_view);
 
-        //表示するデータ
+
         Item Item1 = new Item("Earring", "Unused.", "drawable://" + R.drawable.item1);
         Item Item2 = new Item("Jean Jacket", "Almost new!!", "drawable://" + R.drawable.item2);
         Item Item3 = new Item("Pants", "It's a little old, but it looks like secondhand clothes and is very cute.", "drawable://" + R.drawable.item3);
@@ -66,7 +70,9 @@ public class ShoppingFragment extends Fragment {
         itemList.add(Item5);
         itemList.add(Item6);
 
-     ItemListAdapter adapter = new ItemListAdapter(this.getContext(), R.layout.list_item_layout, itemList);
+
+        ItemListAdapter adapter = new ItemListAdapter(this.getContext(), R.layout.list_item_layout, itemList);
+
      listView.setAdapter(adapter);
 
         // セルを選択されたら詳細画面フラグメント呼び出す
@@ -74,6 +80,7 @@ public class ShoppingFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // 詳細画面へ値を渡す
+
                 DetailFragment fragment = new DetailFragment();
                 Bundle bundle = new Bundle();
                 bundle.putInt("selected", position);
@@ -89,7 +96,5 @@ public class ShoppingFragment extends Fragment {
         });
     }
 }
-
-
 
 
