@@ -2,6 +2,7 @@ package com.erin.Everdrobe.ui.shopping;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.erin.Everdrobe.MainActivity;
 import com.erin.Everdrobe.R;
 import com.erin.Everdrobe.ui.Item;
 import com.erin.Everdrobe.ui.ItemListAdapter;
@@ -24,6 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingFragment extends Fragment {
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -75,15 +79,42 @@ public class ShoppingFragment extends Fragment {
 
      listView.setAdapter(adapter);
 
+
+
+
         // セルを選択されたら詳細画面フラグメント呼び出す
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // 詳細画面へ値を渡す
 
+               /* itemList.get(position);*/
+
+                /*Intent intent = new Intent(context, DetailFragment.class);
+                intent.putExtra("Name", data.get(position).getText());
+                intent.putExtra("Condition", data.get(position).getText());
+                intent.putExtra("ImgURL", data.get(position).getImage());
+                context.startActivity(intent);*/
+
+                //ここから
+
+                Intent intent = new Intent(ShoppingFragment.this, DetailFragment.class);
+                intent.putExtra("Item", itemList.get(position));
+
+                startActivity(intent);
+                //ここまで少し変えた。まだなぜかIntent使ってる
+
+
+
                 DetailFragment fragment = new DetailFragment();
                 Bundle bundle = new Bundle();
-                bundle.putInt("selected", position);
+                /*bundle.putInt("selected", position);*/
+               /* Item chosenItem = itemList.get(position);*/
+
+
+
+
+
                 fragment.setArguments(bundle);
                 // 詳細画面を呼び出す
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
