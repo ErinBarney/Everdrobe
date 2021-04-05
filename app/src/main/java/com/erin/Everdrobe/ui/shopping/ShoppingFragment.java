@@ -25,8 +25,15 @@ import com.erin.Everdrobe.ui.ItemListAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingFragment extends Fragment {
 
+
+public class ShoppingFragment extends Fragment {
+    //1ここから
+    /*private List<Item> listItem;
+    public ShoppingFragment () {
+
+    }*/
+    //1ここまで
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -87,35 +94,16 @@ public class ShoppingFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // 詳細画面へ値を渡す
-
-               /* itemList.get(position);*/
-
-                /*Intent intent = new Intent(context, DetailFragment.class);
-                intent.putExtra("Name", data.get(position).getText());
-                intent.putExtra("Condition", data.get(position).getText());
-                intent.putExtra("ImgURL", data.get(position).getImage());
-                context.startActivity(intent);*/
-
-                //ここから
-
-                Intent intent = new Intent(ShoppingFragment.this, DetailFragment.class);
-                intent.putExtra("Item", itemList.get(position));
-
-                startActivity(intent);
-                //ここまで少し変えた。まだなぜかIntent使ってる
-
-
-
+                //２ここから
+               /* Item model = itemList.get(position);*/
+                //２ここまで
                 DetailFragment fragment = new DetailFragment();
                 Bundle bundle = new Bundle();
-                /*bundle.putInt("selected", position);*/
-               /* Item chosenItem = itemList.get(position);*/
-
-
-
-
-
+                //３ここから
+              /*  bundle.putParcelable("Item", model);*/
+                //３ここまで
                 fragment.setArguments(bundle);
+
                 // 詳細画面を呼び出す
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
                 fr.replace(R.id.container, new DetailFragment());

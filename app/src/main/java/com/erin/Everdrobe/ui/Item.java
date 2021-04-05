@@ -11,20 +11,26 @@ import java.util.ArrayList;
         private String name;
         private String condition;
         private String imgURL;
+        private String size;
+        private String username;
 
 
         public Item(String name, String condition, String imgURL) {
             this.name = name;
             this.condition = condition;
             this.imgURL = imgURL;
+            this.size = size;
+            this.username = username;
 
         }
 
 
-        protected Item(Parcel in) {
+        public Item(Parcel in) {
             name = in.readString();
             condition = in.readString();
             imgURL = in.readString();
+            size = in.readString();
+            username = in.readString();
         }
 
         public static final Creator<Item> CREATOR = new Creator<Item>() {
@@ -62,6 +68,20 @@ import java.util.ArrayList;
         public void setImgURL(String imgURL) {
             this.imgURL = imgURL;
         }
+        public String getSize() {
+            return size;
+        }
+
+        public void setSize(String item) {
+            this.size = size;
+        }
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String item) {
+            this.username = username;
+        }
 
         @Override
         public int describeContents() {
@@ -73,5 +93,8 @@ import java.util.ArrayList;
             dest.writeString(name);
             dest.writeString(condition);
             dest.writeString(imgURL);
+            dest.writeString(size);
+            dest.writeString(username);
+
         }
     }

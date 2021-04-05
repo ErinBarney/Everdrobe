@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,35 +21,33 @@ import com.erin.Everdrobe.R;
 import com.erin.Everdrobe.ui.Item;
 import com.erin.Everdrobe.ui.point.SustainableClothesFragment;
 
+import java.util.List;
+
 
 public class DetailFragment extends Fragment {
 
+Item model;
+
+//１ここから
+   /* private List<Item> listItem;
+
+    public DetailFragment () {
+
+    }*/
+//１ここまで
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_detail, container, false);
-
-        //ここから
-        Intent intent = getIntent();
-        Item exampleItem = intent.getParcelableExtra("Item");
-
-        String line1 = exampleItem.getName();
-        String line2 = exampleItem.getCondition();
-        String line3 = exampleItem.getImgURL();
-
-
-        TextView textView1 = root.findViewById(R.id.text_product2);
-        textView1.setText(line1);
-
-        TextView textView2 = root.findViewById(R.id.text_condi2);
-        textView2.setText(line2);
-
-        ImageView imageView = root.findViewById(R.id.imageView3);
-        imageView.setImageDrawable(Drawable.createFromPath(line3));
-        //ここまで変えた
-
+        //２ここから
+        /*model = new Item(Parcel.obtain());
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            model = bundle.getParcelable("Item");
+        }*/
+        //2ここまで
 
 
         Button btnFragment3 = (Button) root.findViewById(R.id.button_borrow);
