@@ -28,12 +28,12 @@ import java.util.List;
 
 
 public class ShoppingFragment extends Fragment {
-    //1ここから
-    /*private List<Item> listItem;
+
+    private List<Item> listItem;
     public ShoppingFragment () {
 
-    }*/
-    //1ここまで
+    }
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -94,14 +94,11 @@ public class ShoppingFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // 詳細画面へ値を渡す
-                //２ここから
-               /* Item model = itemList.get(position);*/
-                //２ここまで
+
+                Item model = itemList.get(position);
                 DetailFragment fragment = new DetailFragment();
                 Bundle bundle = new Bundle();
-                //３ここから
-              /*  bundle.putParcelable("Item", model);*/
-                //３ここまで
+                bundle.putParcelable("Item", model);
                 fragment.setArguments(bundle);
 
                 // 詳細画面を呼び出す
