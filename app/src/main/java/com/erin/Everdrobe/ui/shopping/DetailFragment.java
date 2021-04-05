@@ -28,26 +28,26 @@ public class DetailFragment extends Fragment {
 
 Item model;
 
-//１ここから
-   /* private List<Item> listItem;
+
+    private List<Item> listItem;
 
     public DetailFragment () {
 
-    }*/
-//１ここまで
+    }
+
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_detail, container, false);
-        //２ここから
-        /*model = new Item(Parcel.obtain());
+
+        model = new Item(Parcel.obtain());
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             model = bundle.getParcelable("Item");
-        }*/
-        //2ここまで
+        }
+
 
 
         Button btnFragment3 = (Button) root.findViewById(R.id.button_borrow);
