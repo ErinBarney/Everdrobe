@@ -21,6 +21,8 @@ import com.erin.Everdrobe.R;
 import com.erin.Everdrobe.ui.Item;
 import com.erin.Everdrobe.ui.point.SustainableClothesFragment;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 
@@ -42,11 +44,35 @@ Item model;
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_detail, container, false);
 
-        model = new Item(Parcel.obtain());
+        Item chosenItem;
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             model = bundle.getParcelable("Item");
         }
+
+
+        String line1 = chosenItem.getName();
+        String line2 = chosenItem.getCondition();
+        String line3 = chosenItem.getImgURL();
+        String line4 = chosenItem.getSize();
+        String line5 = chosenItem.getUsername();
+
+
+        TextView textView1 = (TextView) root.findViewById(R.id.text_product2);
+        textView1.setText(line1);
+
+
+        TextView textView2 = (TextView) root.findViewById(R.id.text_condi2);
+        textView2.setText(line2);
+
+        ImageView imageView3 = (ImageView) root.findViewById(R.id.imageView3);
+        imageView3.setImageDrawable(Drawable.createFromPath(line3));
+
+        TextView textView4 = (TextView) root.findViewById(R.id.text_size2);
+        textView4.setText(line4);
+
+        TextView textView5 = (TextView) root.findViewById(R.id.text_user2);
+        textView5.setText(line5);
 
 
 
