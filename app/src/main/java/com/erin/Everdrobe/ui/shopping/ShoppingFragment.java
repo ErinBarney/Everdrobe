@@ -103,7 +103,7 @@ public class ShoppingFragment extends Fragment {
 
                 // 詳細画面を呼び出す
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
-                fr.replace(R.id.container, new DetailFragment());
+                fr.replace(R.id.container, fragment);
                 // 戻るボタンで戻ってこれるように
                 fr.addToBackStack(null);
                 fr.commit();
