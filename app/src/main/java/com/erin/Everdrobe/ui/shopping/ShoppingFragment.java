@@ -1,23 +1,15 @@
 package com.erin.Everdrobe.ui.shopping;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
-import com.erin.Everdrobe.MainActivity;
 import com.erin.Everdrobe.R;
 import com.erin.Everdrobe.ui.Item;
 import com.erin.Everdrobe.ui.ItemListAdapter;
@@ -54,12 +46,12 @@ public class ShoppingFragment extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.list_view);
 
 
-        Item Item1 = new Item("Earring", "Unused.", "drawable://" + R.drawable.item1, "Normal", "Aoi_0407");
-        Item Item2 = new Item("Jean Jacket", "Almost new!!", "drawable://" + R.drawable.item2, "S", "May:)");
-        Item Item3 = new Item("Pants", "It's a little old, but it looks like secondhand clothes and is very cute.", "drawable://" + R.drawable.item3, "M", "KaitoM");
-        Item Item4 = new Item("Top&Bottom set", "The thread is fraying a little bit, but no worries about wearing.", "drawable://" + R.drawable.item4, "XS", "Kate0831");
-        Item Item5 = new Item("Skirt", "Unused.", "drawable://" + R.drawable.item5, "L", "Anrinrin");
-        Item Item6 = new Item("Dress", "Nearly Unused.", "drawable://" + R.drawable.item6, "S", "Hinata");
+        Item Item1 = new Item("Earring", "Unused.",  + R.drawable.item1, "Normal", "Aoi_0407");
+        Item Item2 = new Item("Jean Jacket", "Almost new!!",  + R.drawable.item2, "S", "May:)");
+        Item Item3 = new Item("Pants", "It's a little old, but it looks like secondhand clothes and is very cute.",  + R.drawable.item3, "M", "KaitoM");
+        Item Item4 = new Item("Top&Bottom set", "The thread is fraying a little bit, but no worries about wearing.",  + R.drawable.item4, "XS", "Kate0831");
+        Item Item5 = new Item("Skirt", "Unused.",  + R.drawable.item5, "L", "Anrinrin");
+        Item Item6 = new Item("Dress", "Nearly Unused.", + R.drawable.item6, "S", "Hinata");
 
         ArrayList<Item> itemList = new ArrayList<>();
         itemList.add(Item1);

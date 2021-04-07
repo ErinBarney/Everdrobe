@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -57,7 +56,7 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
         setupImageLoader();
         String name = getItem(position).getName();
         String condition = getItem(position).getCondition();
-        String imgURL = getItem(position).getImgURL();
+        String imgURL = "drawable://" + getItem(position).getImgURL();
 
         final View result;
 

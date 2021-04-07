@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.erin.Everdrobe.R;
-import com.erin.Everdrobe.ui.shopping.ShoppingFragment;
+
 
 public class PointFragment extends Fragment {
 

@@ -3,19 +3,17 @@ package com.erin.Everdrobe.ui;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
 
-
-    public class Item implements Parcelable{
+public class Item implements Parcelable{
 
         private String name;
         private String condition;
-        private String imgURL;
+        private int imgURL;
         private String size;
         private String username;
 
 
-        public Item(String name, String condition, String imgURL, String size, String username) {
+        public Item(String name, String condition, int imgURL, String size, String username) {
             this.name = name;
             this.condition = condition;
             this.imgURL = imgURL;
@@ -28,7 +26,7 @@ import java.util.ArrayList;
         public Item(Parcel in) {
             name = in.readString();
             condition = in.readString();
-            imgURL = in.readString();
+            imgURL = in.readInt();
             size = in.readString();
             username = in.readString();
         }
@@ -61,11 +59,11 @@ import java.util.ArrayList;
             this.condition = condition;
         }
 
-        public String getImgURL() {
+        public int getImgURL() {
             return imgURL;
         }
 
-        public void setImgURL(String imgURL) {
+        public void setImgURL(int imgURL) {
             this.imgURL = imgURL;
         }
         public String getSize() {
@@ -92,7 +90,7 @@ import java.util.ArrayList;
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeString(name);
             dest.writeString(condition);
-            dest.writeString(imgURL);
+            dest.writeInt(imgURL);
             dest.writeString(size);
             dest.writeString(username);
 
