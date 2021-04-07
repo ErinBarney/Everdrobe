@@ -31,6 +31,7 @@ public class PointFragment extends Fragment {
 
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
                 fr.replace(R.id.container, new SustainableClothesFragment());
+                fr.addToBackStack(null);
                 fr.commit();
 
 
@@ -44,6 +45,7 @@ public class PointFragment extends Fragment {
 
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
                 fr.replace(R.id.container, new HowToFragment());
+                fr.addToBackStack(null);
                 fr.commit();
 
             }

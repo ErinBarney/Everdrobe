@@ -38,12 +38,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="40dp"
         android:text="Username"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/text_user"
@@ -51,11 +51,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="40dp"
         android:text="Mio Suzuki"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/text_email"
@@ -63,12 +63,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="225dp"
+        android:layout_marginTop="40dp"
         android:text="E-mail address"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_username" />
 
     <TextView
         android:id="@+id/text_email2"
@@ -76,11 +76,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="225dp"
+        android:layout_marginTop="40dp"
         android:text="OOXX.email.com"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_user" />
 
     <TextView
         android:id="@+id/text_address"
@@ -88,12 +88,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="40dp"
         android:text="Address"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_email" />
 
     <TextView
         android:id="@+id/text_address2"
@@ -101,11 +101,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="40dp"
         android:text="O-X-O, OO, XX, OOcity, \nXX, Japan"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_email2" />
 
     <TextView
         android:id="@+id/text_plan"
@@ -113,13 +113,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="375dp"
+        android:layout_marginTop="40dp"
         android:text="Plan"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_address" />
 
     <TextView
         android:id="@+id/text_plan2"
@@ -127,11 +127,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="375dp"
+        android:layout_marginTop="40dp"
         android:text="Regular"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_address2" />
 
     <ImageView
         android:id="@+id/imageView"

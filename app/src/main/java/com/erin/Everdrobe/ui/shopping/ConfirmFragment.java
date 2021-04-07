@@ -32,7 +32,8 @@ public class ConfirmFragment extends Fragment {
             public void onClick(View v) {
 
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
-                fr.replace(R.id.container, new DetailFragment());
+                fr.replace(R.id.container, new ShoppingFragment());
+                fr.addToBackStack(null);
                 fr.commit();
 
 
@@ -47,6 +48,7 @@ public class ConfirmFragment extends Fragment {
 
                 FragmentTransaction fr = getParentFragmentManager().beginTransaction();
                 fr.replace(R.id.container, new ShoppingFragment());
+                fr.addToBackStack(null);
                 fr.commit();
                 Toast.makeText(getActivity(),"Borrowed!",Toast.LENGTH_LONG).show();
 

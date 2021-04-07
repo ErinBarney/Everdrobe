@@ -115,11 +115,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="20dp"
         android:text="3"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_remainingclothes" />
 
     <TextView
         android:id="@+id/text_numberpoint"
@@ -127,10 +127,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="20dp"
         android:text="5 pt"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_yourpoint" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
