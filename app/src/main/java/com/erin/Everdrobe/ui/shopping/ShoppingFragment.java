@@ -54,12 +54,12 @@ public class ShoppingFragment extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.list_view);
 
 
-        Item Item1 = new Item("Earring", "Unused.", "drawable://" + R.drawable.item1);
-        Item Item2 = new Item("Jean Jacket", "Almost new!!", "drawable://" + R.drawable.item2);
-        Item Item3 = new Item("Pants", "It's a little old, but it looks like secondhand clothes and is very cute.", "drawable://" + R.drawable.item3);
-        Item Item4 = new Item("Top&Bottom set", "The thread is fraying a little bit, but no worries about wearing.", "drawable://" + R.drawable.item4);
-        Item Item5 = new Item("Skirt", "Unused.", "drawable://" + R.drawable.item5);
-        Item Item6 = new Item("Dress", "Nearly Unused.", "drawable://" + R.drawable.item6);
+        Item Item1 = new Item("Earring", "Unused.", "drawable://" + R.drawable.item1, "Normal", "Aoi_0407");
+        Item Item2 = new Item("Jean Jacket", "Almost new!!", "drawable://" + R.drawable.item2, "S", "May:)");
+        Item Item3 = new Item("Pants", "It's a little old, but it looks like secondhand clothes and is very cute.", "drawable://" + R.drawable.item3, "M", "KaitoM");
+        Item Item4 = new Item("Top&Bottom set", "The thread is fraying a little bit, but no worries about wearing.", "drawable://" + R.drawable.item4, "XS", "Kate0831");
+        Item Item5 = new Item("Skirt", "Unused.", "drawable://" + R.drawable.item5, "L", "Anrinrin");
+        Item Item6 = new Item("Dress", "Nearly Unused.", "drawable://" + R.drawable.item6, "S", "Hinata");
 
         ArrayList<Item> itemList = new ArrayList<>();
         itemList.add(Item1);
@@ -95,10 +95,10 @@ public class ShoppingFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // 詳細画面へ値を渡す
 
-                Item model = itemList.get(position);
+                Item chosenItem = itemList.get(position);
                 DetailFragment fragment = new DetailFragment();
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("Item", model);
+                bundle.putParcelable("Item", chosenItem);
                 fragment.setArguments(bundle);
 
                 // 詳細画面を呼び出す

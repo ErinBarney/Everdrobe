@@ -15,7 +15,7 @@ import java.util.ArrayList;
         private String username;
 
 
-        public Item(String name, String condition, String imgURL) {
+        public Item(String name, String condition, String imgURL, String size, String username) {
             this.name = name;
             this.condition = condition;
             this.imgURL = imgURL;

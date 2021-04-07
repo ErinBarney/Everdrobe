@@ -28,7 +28,7 @@ import java.util.List;
 
 public class DetailFragment extends Fragment {
 
-Item model;
+Item chosenItem;
 
 
     private List<Item> listItem;
@@ -44,10 +44,10 @@ Item model;
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_detail, container, false);
 
-        Item chosenItem;
+
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            model = bundle.getParcelable("Item");
+            chosenItem = bundle.getParcelable("Item");
         }
 
 
