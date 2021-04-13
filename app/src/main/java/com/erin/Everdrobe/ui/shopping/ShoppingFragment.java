@@ -48,10 +48,10 @@ public class ShoppingFragment extends Fragment {
 
         Item Item1 = new Item("Earring", "Unused.",  + R.drawable.item1, "Normal", "Aoi_0407");
         Item Item2 = new Item("Jean Jacket", "Almost new!!",  + R.drawable.item2, "S", "May:)");
-        Item Item3 = new Item("Pants", "It's a little old, but it looks like secondhand clothes and is very cute.",  + R.drawable.item3, "M", "KaitoM");
-        Item Item4 = new Item("Top&Bottom set", "The thread is fraying a little bit, but no worries about wearing.",  + R.drawable.item4, "XS", "Kate0831");
-        Item Item5 = new Item("Skirt", "Unused.",  + R.drawable.item5, "L", "Anrinrin");
-        Item Item6 = new Item("Dress", "Nearly Unused.", + R.drawable.item6, "S", "Hinata");
+        Item Item3 = new Item("Dress", "It's a little old, but it looks like secondhand clothes and is very cute.",  + R.drawable.item3, "M", "KaitoM");
+        Item Item4 = new Item("Pants", "The thread is fraying a little bit, but no worries about wearing.",  + R.drawable.item4, "XS", "Kate0831");
+        Item Item5 = new Item("Top&Bottom set", "Unused.",  + R.drawable.item5, "L", "Anrinrin");
+        Item Item6 = new Item("Skirt", "Nearly Unused.", + R.drawable.item6, "S", "Hinata");
 
         ArrayList<Item> itemList = new ArrayList<>();
         itemList.add(Item1);
